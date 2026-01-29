@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Event Staffing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic+Guides&family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Full-screen intro page styles */
+        #intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1B2B3A;
+            /* or your preferred background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: transform 1s ease-in-out;
+        }
+
+        /* Logo styles */
+        .logo {
+            border-radius: 190px;
+            width: 500px;
+            /* Set equal width and height */
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Slide up animation class */
+        #intro.slide-up {
+            transform: translateY(-100%);
+        }
+
+        /* Use clip-path to animate reveal */
+        #logo-img {
+            width: 300px;
+            /* adjust size as needed */
+            height: auto;
+            clip-path: inset(0% 100% 0% 0%);
+            animation: reveal 3s forwards;
+        }
+
+        @keyframes reveal {
+            from {
+                clip-path: inset(0% 100% 0% 0%);
+            }
+
+            to {
+                clip-path: inset(0% 0% 0% 0%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Intro Page -->
+    <div id="intro">
+        <div class="logo-container">
+            <!-- Replace 'logo.png' with your actual logo image path -->
+            <img src="images/logo.jpeg" alt="Brand Logo" class="logo" />
+        </div>
+    </div>
+
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+        <!-- <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+        </div> -->
+    </header>
+
+    <div class="fullscreen-menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="#footer">Contact</a>
+    </div>
+
+    <!-- ================= HERO VIDEO ================= -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="images/bartender.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay">
+            <h1>Lux Butlers & Concierges</h1>
+            <p class="motto">Lux your trusted source for elite Butlers, Concierges, Wine Stewards
+                Bartenders, Event Models and more
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= SCROLL DESCRIPTION ================= -->
+    <section class="services">
+
+        <div class="text-column">
+            <div class="service active" data-image="img1">
+                <h2>Staffing</h2>
+                <p>Experienced and reliable staff to manage all aspects of your event, ensuring smooth operations and
+                    exceptional guest service.</p>
+            </div>
+
+            <div class="service" data-image="img2">
+                <h2>Bartending</h2>
+                <p>Skilled bartenders and mixologists to craft custom cocktails, serve drinks professionally, and add
+                    flair to your event.</p>
+            </div>
+
+            <div class="service" data-image="img3">
+                <h2>Butlers & Concierge</h2>
+                <p>Personalized butler and concierge services to cater to your guests' needs, creating a luxurious and
+                    memorable experience.</p>
+            </div>
+
+            <div class="service active" data-image="img4">
+                <h2>Wine Stewards</h2>
+                <p>Professional wine stewards to assist with wine selection,
+                    tasting, and service, elevating your wine experience at any event.</p>
+            </div>
+
+            <div class="service active" data-image="img5">
+                <h2>Porters - Scullers</h2>
+                <p>Dedicated porters and scullers to handle luggage, equipment, and logistics, ensuring seamless setup
+                    and event flow.</p>
+            </div>
+
+            <div class="service active" data-image="img6">
+                <h2>Event Models</h2>
+                <p>Elegant, professional models to showcase products, promote brands, and add sophistication and style
+                    to your event.</p>
+            </div>
+
+
+        </div>
+
+        <div class="image-column">
+            <img id="img1" src="images/staffing.jpg" class="active">
+            <img id="img2" src="images/bartender-1.jpg">
+            <img id="img3" src="images/decor.jpg">
+            <img id="img4" src="images/wine-steward.jpg">
+            <img id="img5" src="images/porter.jpg">
+            <img id="img6" src="images/model.jpg">
+        </div>
+
+    </section>
+
+    <!-- HTML - Just the stacked section -->
+    <div class="stack-container">
+        <div class="stack-item">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" alt="Image 1">
+            <div class="stack-overlay">
+                <h2>Elite Staffing</h2>
+            </div>
+        </div>
+
+        <div class="stack-item">
+            <img src="images/tendr.jpg" alt="Image 2">
+            <div class="stack-overlay">
+                <h2>Master Bartenders</h2>
+            </div>
+        </div>
+
+        <div class="stack-item">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200" alt="Image 3">
+            <div class="stack-overlay">
+                <h2>Butler & Concierge</h2>
+            </div>
+        </div>
+
+        <div class="stack-item">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200" alt="Image 4">
+            <div class="stack-overlay">
+                <h2>Wine Stewards</h2>
+            </div>
+        </div>
+
+        <div class="stack-item">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200" alt="Image 5">
+            <div class="stack-overlay">
+                <h2>Event Models</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!-- Heading on the far left -->
+        <div class="heading">
+            The Experience
+        </div>
+
+        <!-- Topics list -->
+        <div class="topics">
+            <!-- Topic 1 -->
+            <div class="topic" onclick="toggleContent('content1', 'sign1')">
+                <div class="topic-title">Dedicated and Resolute</div>
+                <div class="expand-sign" id="sign1">+</div>
+            </div>
+            <div class="topic-content" id="content1">
+                Loyalty and discretion are central to the way we work.
+                We remain steady and unflappable, offering a calm, confident
+                presence no matter how complex the event. Our clients trust us
+                not only for our capability, but for the assurance that we
+                will always act in their best interests.
+            </div>
+
+            <!-- Topic 2 -->
+            <div class="topic" onclick="toggleContent('content2', 'sign2')">
+                <div class="topic-title">Adept and Knowledgeable</div>
+                <div class="expand-sign" id="sign2">+</div>
+            </div>
+            <div class="topic-content" id="content2">
+                Our team at Sarah Haywood represents a depth of expertise
+                grounded in years of experience across the world’s most
+                distinguished events. We are well-versed in technique,
+                tradition and etiquette, and apply this knowledge with
+                sound judgement and refined intuition. We serve as trusted
+                advisers, guiding our clients with the insight and
+                experience gained from years of producing luxury events
+                at the highest level.
+            </div>
+
+            <!-- Topic 3 -->
+            <div class="topic" onclick="toggleContent('content3', 'sign3')">
+                <div class="topic-title">Engaged and Thoughtful</div>
+                <div class="expand-sign" id="sign3">+</div>
+            </div>
+            <div class="topic-content" id="content3">
+                Not matter the complexity of the events we produce, our
+                approach remains personal and attentive. We anticipate
+                needs before they appear and ensure every element is guided
+                by care and intention. The result is an experience
+                that feels effortless for our clients and seamless for their guests.
+            </div>
+
+            <!-- Topic 4 -->
+            <div class="topic" onclick="toggleContent('content4', 'sign4')">
+                <div class="topic-title">Subtle and Discreet</div>
+                <div class="expand-sign" id="sign4">+</div>
+            </div>
+            <div class="topic-content" id="content4">
+                We embody quiet luxury. Our presence is measured,
+                our work deliberate and unobtrusive. We let the work speak for itself.
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #F8F6F0;
+            background-image: 
+            repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px),
+            repeating-linear-gradient(-45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px);
+        }
+
+        /* Demo content - Remove this in your actual site */
+        .demo-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 2em;
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* ============================================
+           FOOTER STYLES - COPY FROM HERE
+           ============================================ */
+
+        footer {
+
+            color: #ffffff;
+            padding: 60px 0 0;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: #D4AF37;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #b0b0b0;
+            line-height: 1.8;
+            font-size: 0.95em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: #667eea;
+        }
+
+        .footer-info {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .footer-info i {
+            color: #667eea;
+            margin-top: 4px;
+            font-size: 1.1em;
+            width: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+        }
+
+        .footer-links a i {
+            font-size: 0.85em;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Social Media Icons */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            color: #b0b0b0;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: D4AF37;
+            transform: translateY(-3px);
+        }
+
+        /* Newsletter Form */
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            background: #2a2a2a;
+            border: 1px solid #3a3a3a;
+            border-radius: 6px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95em;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #666;
+        }
+
+        .newsletter-form button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Bottom Bar */
+        .footer-bottom {
+            border-top: 1px solid #2a2a2a;
+            padding: 25px 0;
+            margin-top: 40px;
+        }
+
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .footer-bottom-links a {
+            color: #666;
+            font-size: 0.9em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #667eea;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+
+        /* ============================================
+           END OF FOOTER STYLES
+           ============================================ */
+    </style>
+
+
+    <script>
+        /* Hamburger Menu */
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+
+        /* Scroll Image Swap */
+        const services = document.querySelectorAll('.service');
+        const images = document.querySelectorAll('.image-column img');
+
+        window.addEventListener('scroll', () => {
+            services.forEach(service => {
+                const rect = service.getBoundingClientRect();
+                if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+                    services.forEach(s => s.classList.remove('active'));
+                    images.forEach(img => img.classList.remove('active'));
+
+                    service.classList.add('active');
+                    document.getElementById(service.dataset.image).classList.add('active');
+                }
+            });
+        });
+
+        // Wait for the page to load
+        window.onload = () => {
+            // Set timer for 3 seconds
+            setTimeout(() => {
+                const intro = document.getElementById('intro');
+                // Add class to trigger slide-up transition
+                intro.classList.add('slide-up');
+            }, 1000);
+        };
+
+        // After transition ends, hide intro and show main content
+        document.getElementById('intro').addEventListener('transitionend', () => {
+            const intro = document.getElementById('intro');
+            const mainContent = document.getElementById('main-content');
+            intro.style.display = 'none';
+            mainContent.style.display = 'block';
+        });
+
+
+        function toggleContent(contentId, signId) {
+            const content = document.getElementById(contentId);
+            const sign = document.getElementById(signId);
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                sign.textContent = '+';
+            } else {
+                content.style.display = 'block';
+                sign.textContent = '−';
+            }
+        }
+
+    </script>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1: About -->
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p style="margin-bottom: 20px;">
+                        At Lux, we believe that exceptional service is
+                        the heart of unforgettable experiences. Born from
+                        a passion for elegance and excellence, Lux provides
+                        elite hospitality staffing solutions for discerning
+                        clients who demand nothing but the best.
+                    </p>
+                    <div class="footer-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>123 Business Street</p>
+                            <p>Benoni, Gauteng, 1500</p>
+                            <p>South Africa</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact & Newsletter -->
+                <div class="footer-column">
+                    <h3>Get In Touch</h3>
+                    <div class="footer-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <p><a href="tel:+27123456789">+27 12 345 6789</a></p>
+                            <p><a href="tel:+27987654321">+27 98 765 4321</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p><a href="mailto:info@company.com">info@company.com</a></p>
+                            <p><a href="mailto:support@company.com">support@company.com</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            <p>Sat: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">
+                    © 2026 Lux Butlers. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 20px;
+            background: #F8F6F0;
+            background-image: 
+            repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px),
+            repeating-linear-gradient(-45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px);
+        }
+
+        /* Container for the whole layout */
+        .container {
+            padding-top: 40px;
+            align-items: flex-start;
+            padding-right: 45px;
+            margin: 0;
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        /* Heading on the far left */
+        .heading {
+            width: max;
+            /* fixed width for the heading column */
+            font-size: 35px;
+            font-weight: bold;
+            margin-right: 20px;
+            color: #D4AF37;
+        }
+
+        /* Topics area */
+        .topics {
+            flex: 1;
+
+        }
+
+        /* Each topic style */
+        .topic {
+            border-top: 1px solid #ccc;
+            padding: 20px 0;
+            min-height: 80px;
+            /* good height for each topic */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        /* Topic title */
+        .topic-title {
+            font-size: 20px;
+        }
+
+        /* Expand/collapse sign styling */
+        .expand-sign {
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+            width: 30px;
+            /* fixed width to align to right */
+            text-align: center;
+        }
+
+        /* Content that expands/collapses */
+        .topic-content {
+            display: none;
+            padding: 10px 0;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+
+
+        /* CSS - Just for the stack */
+        .stack-container {
+            position: relative;
+            width: 96%;
+            max-width: 2000px;
+            margin: 100px auto;
+            height: 400vh;
+            /* Creates scroll space */
+        }
+
+        .stack-item {
+            position: sticky;
+            top: 100px;
+            width: 100%;
+            height: 70vh;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(26, 26, 26, 0.3);
+            margin-bottom: 50px;
+        }
+
+        .stack-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .stack-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            background: linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent);
+        }
+
+        .stack-overlay h2 {
+            color: #F8F6F0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .stack-container {
+                width: 90%;
+            }
+
+            .stack-item {
+                height: 60vh;
+            }
+
+            .stack-overlay h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</body>
+
+</html>
