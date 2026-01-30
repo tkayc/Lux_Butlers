@@ -6,9 +6,9 @@
 }
 
 body {
-    background: #1a1a1a;
+    background: #0B1C2D;
     /* Changed from #f8f8f8 to elegant ivory */
-    color: #1a1a1a;
+    color: #0B1C2D;
     /* Changed from #111 to deep charcoal */
 }
 
@@ -21,6 +21,10 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 1000;
+}
+
+#intro {
+    background-color: #0B1C2D;
 }
 
 
@@ -56,7 +60,7 @@ body {
 .fullscreen-menu {
     position: fixed;
     inset: 0;
-    background: #1B2B3A;
+    background: #0B1C2D;
     /* Changed from #111 to rich navy */
     display: flex;
     flex-direction: column;
@@ -122,7 +126,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: #FAFAF8;
+    color: #FFFFFF;
     /* Changed from white to pearl white */
     background: linear-gradient(to bottom, rgba(27, 43, 58, 0.4), rgba(26, 26, 26, 0.5));
     /* Elegant gradient overlay */
@@ -150,7 +154,7 @@ body {
 .motto {
     margin-top: 15px;
     font-size: 1.2rem;
-    color: #F8F6F0;
+    color: #FFFFFF;
     /* Ivory */
 }
 
@@ -183,7 +187,7 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 3rem;
-    color: #1B2B3A;
+    color: #FFFFFF;
     /* Rich navy for headings */
 }
 
@@ -193,7 +197,7 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: 1.7rem;
-    color: #5A5A5A;
+    color: #FFFFFF;
     /* Warm gray for body text */
 }
 
@@ -245,12 +249,16 @@ body {
         font-size: 2.5rem;
     }
 
-    .hero{
-        width: 100vw; /* Full viewport width */
-        margin-left: calc(-50vw + 50%); /* Remove default margins/padding */
+    .hero {
+        width: 100vw;
+        /* Full viewport width */
+        margin-left: calc(-50vw + 50%);
+        /* Remove default margins/padding */
         margin-right: calc(-50vw + 50%);
-        box-sizing: border-box; /* Include padding/borders in size calculations */
-        position: relative; /* Optional: if you need positioning */
+        box-sizing: border-box;
+        /* Include padding/borders in size calculations */
+        position: relative;
+        /* Optional: if you need positioning */
         margin-top: 0;
         padding-top: 0;
     }
@@ -306,7 +314,7 @@ body {
 
         .footer-column h3 {
             font-size: 1.1em;
-        ;
+            ;
         }
 
         /* Stack Container */
@@ -336,6 +344,7 @@ body {
 
         #intro {
             padding: 20px;
+
         }
 
         .logo-container {
@@ -362,12 +371,16 @@ body {
             flex-direction: column;
             /* padding: 60px 5%; */
             gap: 0;
-            background: #0a0a0a;
-            width: 100vw; /* Full viewport width */
-            margin-left: calc(-50vw + 50%); /* Remove default margins/padding */
+            background: #0B1C2D;
+            width: 100vw;
+            /* Full viewport width */
+            margin-left: calc(-50vw + 50%);
+            /* Remove default margins/padding */
             margin-right: calc(-50vw + 50%);
-            box-sizing: border-box; /* Include padding/borders in size calculations */
-            position: relative; /* Optional: if you need positioning */
+            box-sizing: border-box;
+            /* Include padding/borders in size calculations */
+            position: relative;
+            /* Optional: if you need positioning */
         }
 
         .text-column,
