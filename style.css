@@ -350,6 +350,7 @@ body {
             flex-direction: column;
             padding: 60px 5%;
             gap: 0;
+            background: #0a0a0a;
         }
 
         .text-column,
