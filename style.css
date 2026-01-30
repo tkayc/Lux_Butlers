@@ -6,8 +6,10 @@
 }
 
 body {
-    background: #1a1a1a; /* Changed from #f8f8f8 to elegant ivory */
-    color: #1a1a1a; /* Changed from #111 to deep charcoal */
+    background: #1a1a1a;
+    /* Changed from #f8f8f8 to elegant ivory */
+    color: #1a1a1a;
+    /* Changed from #111 to deep charcoal */
 }
 
 /* NAV */
@@ -39,20 +41,23 @@ body {
     display: block;
     width: 30px;
     height: 2px;
-    background: #1a1a1a; /* Changed from #000 to deep charcoal */
+    background: #1a1a1a;
+    /* Changed from #000 to deep charcoal */
     margin: 6px 0;
     transition: background 0.3s ease;
 }
 
 .hamburger:hover span {
-    background: #D4AF37; /* Champagne gold on hover */
+    background: #D4AF37;
+    /* Champagne gold on hover */
 }
 
 /* FULLSCREEN MENU */
 .fullscreen-menu {
     position: fixed;
     inset: 0;
-    background: #1B2B3A; /* Changed from #111 to rich navy */
+    background: #1B2B3A;
+    /* Changed from #111 to rich navy */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +72,8 @@ body {
 }
 
 .fullscreen-menu a {
-    color: #F8F6F0; /* Changed from #fff to ivory for softer look */
+    color: #F8F6F0;
+    /* Changed from #fff to ivory for softer look */
     font-size: 2rem;
     margin: 15px;
     text-decoration: none;
@@ -87,7 +93,8 @@ body {
 }
 
 .fullscreen-menu a:hover {
-    color: #D4AF37; /* Champagne gold hover */
+    color: #D4AF37;
+    /* Champagne gold hover */
 }
 
 .fullscreen-menu a:hover::after {
@@ -115,8 +122,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: #FAFAF8; /* Changed from white to pearl white */
-    background: linear-gradient(to bottom, rgba(27, 43, 58, 0.4), rgba(26, 26, 26, 0.5)); /* Elegant gradient overlay */
+    color: #FAFAF8;
+    /* Changed from white to pearl white */
+    background: linear-gradient(to bottom, rgba(27, 43, 58, 0.4), rgba(26, 26, 26, 0.5));
+    /* Elegant gradient overlay */
 }
 
 .hero h1 {
@@ -141,7 +150,8 @@ body {
 .motto {
     margin-top: 15px;
     font-size: 1.2rem;
-    color: #F8F6F0; /* Ivory */
+    color: #F8F6F0;
+    /* Ivory */
 }
 
 /* SERVICES */
@@ -149,21 +159,22 @@ body {
     display: flex;
     padding: 120px 5%;
     gap: 5%;
-    background: #FAFAF8; /* Pearl white background */
+    background: #FAFAF8;
+    /* Pearl white background */
     background-color: #F8F6F0;
-    background-image: 
+    background-image:
         linear-gradient(45deg, rgba(26, 26, 26, 0.02) 25%, transparent 25%, transparent 75%, rgba(26, 26, 26, 0.02) 75%, rgba(26, 26, 26, 0.02)),
         linear-gradient(45deg, rgba(26, 26, 26, 0.02) 25%, transparent 25%, transparent 75%, rgba(26, 26, 26, 0.02) 75%, rgba(26, 26, 26, 0.02)),
         linear-gradient(-45deg, rgba(26, 26, 26, 0.02) 25%, transparent 25%, transparent 75%, rgba(26, 26, 26, 0.02) 75%, rgba(26, 26, 26, 0.02)),
         linear-gradient(-45deg, rgba(26, 26, 26, 0.02) 25%, transparent 25%, transparent 75%, rgba(26, 26, 26, 0.02) 75%, rgba(26, 26, 26, 0.02));
-    
-    
+
+
 }
 
 .text-column {
     width: 50%;
-    
-        
+
+
 }
 
 .text-column h2 {
@@ -172,7 +183,8 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 3rem;
-    color: #1B2B3A; /* Rich navy for headings */
+    color: #1B2B3A;
+    /* Rich navy for headings */
 }
 
 .text-column p {
@@ -181,7 +193,8 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: 1.7rem;
-    color: #5A5A5A; /* Warm gray for body text */
+    color: #5A5A5A;
+    /* Warm gray for body text */
 }
 
 .service {
@@ -196,7 +209,8 @@ body {
 }
 
 .service.active h2 {
-    color: #D4AF37; /* Champagne gold for active service */
+    color: #D4AF37;
+    /* Champagne gold for active service */
 }
 
 .image-column {
@@ -214,12 +228,14 @@ body {
     border-radius: 24px;
     opacity: 0;
     transition: 0.4s;
-    box-shadow: 0 10px 40px rgba(26, 26, 26, 0.15); /* Subtle shadow */
+    box-shadow: 0 10px 40px rgba(26, 26, 26, 0.15);
+    /* Subtle shadow */
 }
 
 .image-column img.active {
     opacity: 1;
-    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2); /* Gold glow when active */
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+    /* Gold glow when active */
 }
 
 
@@ -242,5 +258,88 @@ body {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+
+        /* Navigation */
+        .nav {
+            padding: 15px 20px;
+        }
+
+        .hamburger span {
+            width: 25px;
+        }
+
+        /* Hero Section */
+        .hero h1 {
+            font-size: 2rem !important;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .motto {
+            font-size: 1rem !important;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* Services Text */
+        .text-column h2 {
+            font-size: 2rem !important;
+        }
+
+        .text-column p {
+            font-size: 1.2rem !important;
+        }
+
+        .service {
+            margin-top: 100px;
+            margin-bottom: 250px;
+        }
+
+        /* Experience Section */
+        .container {
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .topic-title {
+            font-size: 16px;
+        }
+
+        .topic-content {
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer-grid {
+            grid-template-columns: 1fr !important;
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1em;
+        }
+
+        /* Stack Container */
+        .stack-container {
+            width: 95%;
+            margin: 50px auto;
+        }
+
+        .stack-item {
+            height: 50vh;
+            border-radius: 20px;
+        }
+
+        .stack-overlay h2 {
+            font-size: 1.5rem;
+            padding: 20px;
+        }
     }
 }
