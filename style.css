@@ -251,6 +251,8 @@ body {
         margin-right: calc(-50vw + 50%);
         box-sizing: border-box; /* Include padding/borders in size calculations */
         position: relative; /* Optional: if you need positioning */
+        margin-top: 0;
+        padding-top: 0;
     }
 
     @media (max-width: 768px) {
@@ -275,6 +277,7 @@ body {
             font-size: 1rem !important;
             padding: 0 20px;
             text-align: center;
+            padding-bottom: 10px;
         }
 
         /* Experience Section */
@@ -303,6 +306,7 @@ body {
 
         .footer-column h3 {
             font-size: 1.1em;
+        ;
         }
 
         /* Stack Container */
