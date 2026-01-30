@@ -415,27 +415,27 @@ body {
 
         /* Individual service images */
         .service[data-image="img1"]::after {
-            background-image: url('images/crewline.jpeg');
+            background-image: url('images/staffing.jpg');
         }
 
         .service[data-image="img2"]::after {
-            background-image: url('images/qwe.jpeg');
+            background-image: url('images/bartender-1.jpg');
         }
 
         .service[data-image="img3"]::after {
-            background-image: url('images/t-set.jpeg');
+            background-image: url('images/decor.jpg');
         }
 
         .service[data-image="img4"]::after {
-            background-image: url('images/wine-hold.jpeg');
+            background-image: url('images/wine-steward.jpg');
         }
 
         .service[data-image="img5"]::after {
-            background-image: url('images/qws.jpeg');
+            background-image: url('images/porter.jpg');
         }
 
         .service[data-image="img6"]::after {
-            background-image: url('images/waiter.jpeg');
+            background-image: url('images/model.jpg');
         }
     }
 
