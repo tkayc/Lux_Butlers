@@ -245,6 +245,14 @@ body {
         font-size: 2.5rem;
     }
 
+    .hero{
+        width: 100vw; /* Full viewport width */
+        margin-left: calc(-50vw + 50%); /* Remove default margins/padding */
+        margin-right: calc(-50vw + 50%);
+        box-sizing: border-box; /* Include padding/borders in size calculations */
+        position: relative; /* Optional: if you need positioning */
+    }
+
     @media (max-width: 768px) {
 
         /* Navigation */
