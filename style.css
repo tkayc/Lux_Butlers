@@ -421,4 +421,32 @@ body {
         }
     }
 
+    /* =========================
+   MOBILE INTRO LOGO FIX
+   ========================= */
+    @media (max-width: 768px) {
+
+        #intro {
+            padding: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 80vw;
+            /* Responsive width */
+            max-width: 300px;
+            /* Prevents oversized logo */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 24px;
+            object-fit: contain;
+        }
+    }
+
+
 }
