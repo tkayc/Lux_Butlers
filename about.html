@@ -63,7 +63,7 @@
             transition: all 0.3s ease;
         }
 
-        
+
         .menu-spacer {
             width: 30px;
         }
@@ -115,10 +115,10 @@
 
         /* header branding */
         .brand-container {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
         }
 
         .brand-name {
@@ -167,7 +167,7 @@
             color: var(--white);
         }
 
-        
+
 
         /* Team Section */
         .team-section {
@@ -383,6 +383,84 @@
                 height: 60vh;
             }
         }
+
+        /* Our Approach Section */
+        .approach-section {
+            padding: 80px 20px;
+            background-color: var(--navy);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .approach-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .approach-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .approach-section .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .approach-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .approach-text {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--white);
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .approach-highlight {
+            font-size: 19px;
+            line-height: 1.8;
+            color: var(--gold-light);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .approach-highlight strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .approach-section .section-heading {
+                font-size: 42px;
+            }
+
+            .approach-text {
+                font-size: 18px;
+            }
+
+            .approach-highlight {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -410,7 +488,7 @@
     </div>
     <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
-    
+
 
     <!-- First Content Section -->
     <section class="content-section">
@@ -425,8 +503,7 @@
 
     <!-- Image Content Block -->
     <section class="image-content-block" id="services">
-        <img src="images/wqsa.jpeg" alt="Luxury table setting"
-            class="content-image">
+        <img src="images/wqsa.jpeg" alt="Luxury table setting" class="content-image">
         <div class="image-content-text">
             <h2 class="section-heading">Brand Values</h2>
             <div class="divider"></div>
@@ -440,8 +517,7 @@
 
     <br><br><br><br>
     <section class="image-content-block" id="services">
-        <img src="images/eew.jpeg" alt="Luxury table setting"
-            class="content-image">
+        <img src="images/eew.jpeg" alt="Luxury table setting" class="content-image">
         <div class="image-content-text">
             <h2 class="section-heading">Experience</h2>
             <div class="divider"></div>
@@ -449,6 +525,23 @@
                 From intimate private gatherings to grand corporate functions, our expertly trained staff deliver
                 sophisticated service with impeccable attention to detail. We specialize in luxury events, private
                 dining, and exclusive hospitality experiences that leave lasting impressions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="approach-section">
+        <div class="approach-content">
+            <h2 class="section-heading">OUR APPROACH</h2>
+            <div class="divider"></div>
+
+            <p class="approach-text">
+                Every event is unique. We take the time to understand your vision, your guests, and your expectations,
+                ensuring our service complements your event seamlessly.
+            </p>
+
+            <p class="approach-highlight">
+                From first contact to final execution, Lux guarantees <strong>luxury in every detail</strong>.
             </p>
         </div>
     </section>
@@ -461,35 +554,28 @@
         <div class="slider-container">
             <div class="slider" id="slider">
                 <div class="slide">
-                    <img src="images/jklj.jpeg"
-                        alt="Team member 1">
+                    <img src="images/jklj.jpeg" alt="Team member 1">
                 </div>
                 <div class="slide">
-                    <img src="images/dfgf.jpeg"
-                        alt="Team member 2">
+                    <img src="images/dfgf.jpeg" alt="Team member 2">
                 </div>
                 <div class="slide">
                     <img src="images/qas.jpeg" alt="Team member 3">
                 </div>
                 <div class="slide">
-                    <img src="images/qwe.jpeg"
-                        alt="Team member 4">
+                    <img src="images/qwe.jpeg" alt="Team member 4">
                 </div>
                 <div class="slide">
-                    <img src="images/wed.jpeg"
-                        alt="Team member 4">
+                    <img src="images/wed.jpeg" alt="Team member 4">
                 </div>
                 <div class="slide">
-                    <img src="images/table.jpeg"
-                        alt="Team member 4">
+                    <img src="images/table.jpeg" alt="Team member 4">
                 </div>
                 <div class="slide">
-                    <img src="images/event.jpg"
-                        alt="Team member 4">
+                    <img src="images/event.jpg" alt="Team member 4">
                 </div>
                 <div class="slide">
-                    <img src="images/crew.jpeg"
-                        alt="Team member 4">
+                    <img src="images/crew.jpeg" alt="Team member 4">
                 </div>
             </div>
         </div>
