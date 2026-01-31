@@ -433,6 +433,182 @@
                 right: 30px;
             }
         }
+
+
+        /* Desktop Improvements - Add these styles */
+
+        /* Container for desktop centering */
+        @media (min-width: 1024px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            
+            /* Header - keep full width */
+            header {
+                padding: 25px 50px;
+            }
+            
+            .brand-name {
+                font-size: 24px;
+            }
+            
+            .brand-motto {
+                font-size: 12px;
+            }
+            
+            /* Video Section - improve sizing */
+            .video-section {
+                height: 70vh;
+                max-height: 600px;
+            }
+            
+            /* Content Sections - max width for readability */
+            .content-section {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 80px 40px;
+            }
+            
+            .section-heading {
+                font-size: 42px;
+            }
+            
+            .section-text {
+                font-size: 18px;
+                max-width: 700px;
+            }
+            
+            /* Image Content Block - Fix image display */
+            .image-content-block {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .content-image {
+                width: 100%;
+                max-width: 1200px;
+                height: 500px;
+                object-fit: cover;
+                object-position: center;
+            }
+            
+            .image-content-text {
+                max-width: 800px;
+                padding: 80px 40px;
+            }
+            
+            /* Services List Section */
+            .services-list-section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 80px 40px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1000px;
+                gap: 25px;
+            }
+            
+            .service-item {
+                padding: 25px 20px;
+                font-size: 15px;
+            }
+            
+            /* Approach Section */
+            .approach-section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 100px 40px;
+            }
+            
+            .approach-content {
+                max-width: 800px;
+            }
+            
+            /* Why Choose Section */
+            .why-choose-section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 80px 40px;
+            }
+            
+            .why-choose-list {
+                max-width: 800px;
+            }
+            
+            .why-item {
+                margin-bottom: 30px;
+            }
+            
+            /* Team Section */
+            .team-section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 80px 40px;
+            }
+            
+            .slider-container {
+                max-width: 700px;
+            }
+            
+            .slide img {
+                max-width: 500px;
+                height: 500px;
+            }
+            
+            /* Footer - full width but content centered */
+            footer {
+                width: 100%;
+                padding: 60px 40px 120px;
+            }
+            
+            .footer-details {
+                font-size: 15px;
+            }
+            
+            /* Book Now Button */
+            .book-now-btn {
+                bottom: 30px;
+                padding: 18px 50px;
+                font-size: 17px;
+            }
+            
+            /* WhatsApp Float */
+            .whatsapp-float {
+                width: 65px;
+                height: 65px;
+                font-size: 35px;
+            }
+        }
+
+        /* Extra large screens */
+        @media (min-width: 1440px) {
+            .video-section {
+                max-height: 700px;
+            }
+            
+            .content-image {
+                max-width: 1400px;
+                height: 600px;
+            }
+            
+            .image-content-block {
+                max-width: 1400px;
+            }
+            
+            .services-list-section,
+            .approach-section,
+            .why-choose-section,
+            .team-section {
+                max-width: 1400px;
+            }
+        }
     </style>
 </head>
 
