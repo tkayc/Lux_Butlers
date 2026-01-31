@@ -461,6 +461,80 @@
                 font-size: 20px;
             }
         }
+
+        /* Why Choose Lux Section */
+        .why-choose-section {
+            padding: 80px 20px;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .why-choose-section .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .why-choose-list {
+            max-width: 700px;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .why-item::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 12px;
+            top: 5px;
+        }
+
+        .why-item-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--navy);
+            font-weight: 400;
+        }
+
+        .why-tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--navy);
+            font-style: italic;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gold);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .why-choose-section .section-heading {
+                font-size: 42px;
+            }
+
+            .why-item-text {
+                font-size: 17px;
+            }
+
+            .why-tagline {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 
@@ -544,6 +618,34 @@
                 From first contact to final execution, Lux guarantees <strong>luxury in every detail</strong>.
             </p>
         </div>
+    </section>
+
+    <!-- Why Choose Lux Section -->
+    <section class="why-choose-section">
+        <h2 class="section-heading">WHY CHOOSE LUX</h2>
+        <div class="divider"></div>
+
+        <div class="why-choose-list">
+            <div class="why-item">
+                <p class="why-item-text">Hand-selected, professionally trained staff</p>
+            </div>
+            <div class="why-item">
+                <p class="why-item-text">Discreet, polished, and reliable service</p>
+            </div>
+            <div class="why-item">
+                <p class="why-item-text">Attention to detail at every level</p>
+            </div>
+            <div class="why-item">
+                <p class="why-item-text">Trusted by luxury venues, event planners, and private clients</p>
+            </div>
+            <div class="why-item">
+                <p class="why-item-text">Seamless execution from start to finish</p>
+            </div>
+        </div>
+
+        <p class="why-tagline">
+            Because luxury is not loud — it's intentional.
+        </p>
     </section>
 
 
