@@ -2,855 +2,586 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lux Butlers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Butlers & Staffing - Luxury in Every Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic+Guides&family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
         rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        
-        rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        /* Full-screen intro page styles */
-        #intro {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #1B2B3A;
-            /* or your preferred background color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: transform 1s ease-in-out;
-        }
-
-        /* Logo styles */
-        .logo {
-            border-radius: 190px;
-            width: 500px;
-            /* Set equal width and height */
-            height: 400px;
-            object-fit: cover;
-        }
-
-        /* Slide up animation class */
-        #intro.slide-up {
-            transform: translateY(-100%);
-        }
-
-        /* Use clip-path to animate reveal */
-        #logo-img {
-            width: 300px;
-            /* adjust size as needed */
-            height: auto;
-            clip-path: inset(0% 100% 0% 0%);
-            animation: reveal 3s forwards;
-        }
-
-        @keyframes reveal {
-            from {
-                clip-path: inset(0% 100% 0% 0%);
-            }
-
-            to {
-                clip-path: inset(0% 0% 0% 0%);
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <!-- Intro Page -->
-    <div id="intro">
-        <div class="logo-container">
-            <!-- Replace 'logo.png' with your actual logo image path -->
-            <img src="images/logo.jpeg" alt="Brand Logo" class="logo" />
-        </div>
-    </div>
-
-    <!-- ================= NAV ================= -->
-    <header class="nav">
-        <!-- <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-        </div> -->
-    </header>
-
-    <!-- <div class="fullscreen-menu" id="menu">
-        <a href="index.html">Home</a>
-        <a href="#footer">Contact</a>
-    </div> -->
-
-    <!-- ================= HERO VIDEO ================= -->
-    <section class="hero">
-        <video autoplay muted loop playsinline>
-            <source src="images/vid.mp4" type="video/mp4">
-        </video>
-
-        <div class="hero-overlay">
-            <h1>Lux <br>Butlers & Concierges</h1>
-
-            <p class="motto">Lux your trusted source for elite Butlers, Concierges, Wine Stewards
-                Bartenders, Event Models and more
-            </p>
-        </div>
-    </section>
-
-    <!-- ================= SCROLL DESCRIPTION ================= -->
-    <section class="services">
-
-        <div class="text-column">
-            <div class="service active" data-image="img1">
-                <h2>Staffing</h2>
-                <p>Experienced and reliable staff to manage all aspects of your event, ensuring smooth operations and
-                    exceptional guest service.</p>
-            </div>
-
-            <div class="service" data-image="img2">
-                <h2>Bartending</h2>
-                <p>Skilled bartenders and mixologists to craft custom cocktails, serve drinks professionally, and add
-                    flair to your event.</p>
-            </div>
-
-            <div class="service" data-image="img3">
-                <h2>Butlers & Concierge</h2>
-                <p>Personalized butler and concierge services to cater to your guests' needs, creating a luxurious and
-                    memorable experience.</p>
-            </div>
-
-            <div class="service active" data-image="img4">
-                <h2>Wine Stewards</h2>
-                <p>Professional wine stewards to assist with wine selection,
-                    tasting, and service, elevating your wine experience at any event.</p>
-            </div>
-
-            <div class="service active" data-image="img5">
-                <h2>Porters - Scullers</h2>
-                <p>Dedicated porters and scullers to handle luggage, equipment, and logistics, ensuring seamless setup
-                    and event flow.</p>
-            </div>
-
-            <div class="service active" data-image="img6">
-                <h2>Event Models</h2>
-                <p>Elegant, professional models to showcase products, promote brands, and add sophistication and style
-                    to your event.</p>
-            </div>
-
-
-        </div>
-
-        <div class="image-column">
-            <img id="img1" src="images/crewline.jpeg" class="active">
-            <img id="img2" src="images/qwe.jpeg">
-            <img id="img3" src="images/t-set.jpeg">
-            <img id="img4" src="images/wine-hold.jpeg">
-            <img id="img5" src="images/qws.jpeg">
-            <img id="img6" src="images/waiter.jpeg">
-        </div>
-
-    </section>
-
-    <!-- HTML - Just the stacked section -->
-    <div class="stack-container">
-        <div class="stack-item">
-            <img src="images/crew.jpeg" alt="Image 1">
-            <div class="stack-overlay">
-                <h2>Elite Staffing</h2>
-            </div>
-        </div>
-
-        <div class="stack-item">
-            <img src="images/weq.jpeg" alt="Image 2">
-            <div class="stack-overlay">
-                <h2>Master Bartenders</h2>
-            </div>
-        </div>
-
-        <div class="stack-item">
-            <img src="images/wqsa.jpeg" alt="Image 3">
-            <div class="stack-overlay">
-                <h2>Butler & Concierge</h2>
-            </div>
-        </div>
-
-        <div class="stack-item">
-            <img src="images/wws.jpeg" alt="Image 4">
-            <div class="stack-overlay">
-                <h2>Wine Stewards</h2>
-            </div>
-        </div>
-
-        <div class="stack-item">
-            <img src="images/crewline.jpeg" alt="Image 5">
-            <div class="stack-overlay">
-                <h2>Event Models</h2>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <!-- Heading on the far left -->
-        <div class="heading">
-            The Experience
-        </div>
-
-        <!-- Topics list -->
-        <div class="topics">
-            <!-- Topic 1 -->
-            <div class="topic" onclick="toggleContent('content1', 'sign1')">
-                <div class="topic-title">Dedicated and Resolute</div>
-                <div class="expand-sign" id="sign1">+</div>
-            </div>
-            <div class="topic-content" id="content1">
-                Loyalty and discretion are central to the way we work.
-                We remain steady and unflappable, offering a calm, confident
-                presence no matter how complex the event. Our clients trust us
-                not only for our capability, but for the assurance that we
-                will always act in their best interests.
-            </div>
-
-            <!-- Topic 2 -->
-            <div class="topic" onclick="toggleContent('content2', 'sign2')">
-                <div class="topic-title">Adept and Knowledgeable</div>
-                <div class="expand-sign" id="sign2">+</div>
-            </div>
-            <div class="topic-content" id="content2">
-                Our team at Sarah Haywood represents a depth of expertise
-                grounded in years of experience across the world’s most
-                distinguished events. We are well-versed in technique,
-                tradition and etiquette, and apply this knowledge with
-                sound judgement and refined intuition. We serve as trusted
-                advisers, guiding our clients with the insight and
-                experience gained from years of producing luxury events
-                at the highest level.
-            </div>
-
-            <!-- Topic 3 -->
-            <div class="topic" onclick="toggleContent('content3', 'sign3')">
-                <div class="topic-title">Engaged and Thoughtful</div>
-                <div class="expand-sign" id="sign3">+</div>
-            </div>
-            <div class="topic-content" id="content3">
-                Not matter the complexity of the events we produce, our
-                approach remains personal and attentive. We anticipate
-                needs before they appear and ensure every element is guided
-                by care and intention. The result is an experience
-                that feels effortless for our clients and seamless for their guests.
-            </div>
-
-            <!-- Topic 4 -->
-            <div class="topic" onclick="toggleContent('content4', 'sign4')">
-                <div class="topic-title">Subtle and Discreet</div>
-                <div class="expand-sign" id="sign4">+</div>
-            </div>
-            <div class="topic-content" id="content4">
-                We embody quiet luxury. Our presence is measured,
-                our work deliberate and unobtrusive. We let the work speak for itself.
-            </div>
-        </div>
-    </div>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --navy: #0a1128;
+            --white: #ffffff;
+            --gold: #d4af37;
+            --gold-light: #e8c97f;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: #0B1C2D;
-            background-image:
-                repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px),
-                repeating-linear-gradient(-45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            background-color: var(--white);
+            overflow-x: hidden;
         }
 
-        /* Demo content - Remove this in your actual site */
-        .demo-content {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-size: 2em;
-            padding: 50px;
-            text-align: center;
-        }
-
-        /* ============================================
-           FOOTER STYLES - COPY FROM HERE
-           ============================================ */
-
-        footer {
-
-            color: #0B1C2D;
-            padding: 60px 0 0;
-            position: relative;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
+        /* Header */
+        header {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            color: #FFFFFF;
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-        }
-
-        .footer-column p,
-        .footer-column a {
-            color: #b0b0b0;
-            line-height: 1.8;
-            font-size: 0.95em;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column a:hover {
-            color: #C9A24D;
-        }
-
-        .footer-info {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .footer-info i {
-            color: #C9A24D;
-            margin-top: 4px;
-            font-size: 1.1em;
-            width: 20px;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 5px 0;
-        }
-
-        .footer-links a i {
-            font-size: 0.85em;
-            color: #C9A24D;
-            transition: transform 0.3s ease;
-        }
-
-        .footer-links a:hover i {
-            transform: translateX(3px);
-        }
-
-        /* Social Media Icons */
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
+            background-color: var(--white);
+            padding: 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #2a2a2a;
-            border-radius: 8px;
-            color: #b0b0b0;
-            font-size: 1.1em;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(10, 17, 40, 0.1);
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 2px;
+            background-color: var(--navy);
             transition: all 0.3s ease;
         }
 
-        .social-links a:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: D4AF37;
-            transform: translateY(-3px);
-        }
-
-        /* Newsletter Form */
-        .newsletter-form {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 15px;
-            background: #2a2a2a;
-            border: 1px solid #3a3a3a;
-            border-radius: 6px;
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95em;
-            transition: border-color 0.3s ease;
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .newsletter-form input::placeholder {
-            color: #666;
-        }
-
-        .newsletter-form button {
-            padding: 12px 25px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            border-radius: 6px;
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .newsletter-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Bottom Bar */
-        .footer-bottom {
-            border-top: 1px solid #C9A24D;
-            padding: 25px 0;
-            margin-top: 40px;
-        }
-
-        .footer-bottom-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .copyright {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .footer-bottom-links a {
-            color: #666;
-            font-size: 0.9em;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-bottom-links a:hover {
-            color: #667eea;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-
-            .footer-container {
-                background: #0B1C2D;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .footer-bottom-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-bottom-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-form button {
-                width: 100%;
-            }
-
-            .footer-column {
-                padding-top: 10px;
-            }
-
-            #footer {
-                width: 100vw;
-                /* Full viewport width */
-                margin-left: calc(-50vw + 50%);
-                /* Remove default margins/padding */
-                margin-right: calc(-50vw + 50%);
-                box-sizing: border-box;
-                /* Include padding/borders in size calculations */
-                position: relative;
-                /* Optional: if you need positioning */
-            }
-        }
-
-        /* ============================================
-           END OF FOOTER STYLES
-           ============================================ */
-    </style>
-
-
-    <script>
-        /* Hamburger Menu */
-        function toggleMenu() {
-            document.getElementById('menu').classList.toggle('show');
-        }
-
-        /* Scroll Image Swap */
-        const services = document.querySelectorAll('.service');
-        const images = document.querySelectorAll('.image-column img');
-
-        window.addEventListener('scroll', () => {
-            services.forEach(service => {
-                const rect = service.getBoundingClientRect();
-                if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-                    services.forEach(s => s.classList.remove('active'));
-                    images.forEach(img => img.classList.remove('active'));
-
-                    service.classList.add('active');
-                    document.getElementById(service.dataset.image).classList.add('active');
-                }
-            });
-        });
-
-        // Wait for the page to load
-        window.onload = () => {
-            // Set timer for 3 seconds
-            setTimeout(() => {
-                const intro = document.getElementById('intro');
-                // Add class to trigger slide-up transition
-                intro.classList.add('slide-up');
-            }, 1000);
-        };
-
-        // After transition ends, hide intro and show main content
-        document.getElementById('intro').addEventListener('transitionend', () => {
-            const intro = document.getElementById('intro');
-            const mainContent = document.getElementById('main-content');
-            intro.style.display = 'none';
-            mainContent.style.display = 'block';
-        });
-
-
-        function toggleContent(contentId, signId) {
-            const content = document.getElementById(contentId);
-            const sign = document.getElementById(signId);
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                sign.textContent = '+';
-            } else {
-                content.style.display = 'block';
-                sign.textContent = '−';
-            }
-        }
-
-    </script>
-
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Column 1: About -->
-                <div class="footer-column">
-                    <h3>About Us</h3>
-                    <p style="margin-bottom: 20px;">
-                        At Lux, we believe that exceptional service is
-                        the heart of unforgettable experiences. Born from
-                        a passion for elegance and excellence, Lux provides
-                        elite hospitality staffing solutions for discerning
-                        clients who demand nothing but the best.
-                    </p>
-                    <div class="footer-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <p>123 Business Street</p>
-                            <p>Benoni, Gauteng, 1500</p>
-                            <p>South Africa</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-
-                <!-- Column 2: Quick Links -->
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Contact & Newsletter -->
-                <div class="footer-column">
-                    <h3>Get In Touch</h3>
-                    <div class="footer-info">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <p><a href="tel:+27123456789">+27 12 345 6789</a></p>
-                            <p><a href="tel:+27987654321">+27 98 765 4321</a></p>
-                        </div>
-                    </div>
-                    <div class="footer-info">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <p><a href="mailto:info@company.com">info@company.com</a></p>
-                            <p><a href="mailto:support@company.com">support@company.com</a></p>
-                        </div>
-                    </div>
-                    <div class="footer-info">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                            <p>Sat: 9:00 AM - 1:00 PM</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p class="copyright">
-                    © 2026 Lux Butlers. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0B1C2D;
-            margin: 0;
-            padding: 20px;
-            background: #0B1C2D;
-            background-image:
-                repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px),
-                repeating-linear-gradient(-45deg, transparent, transparent 50px, rgba(212, 175, 55, 0.05) 50px, rgba(212, 175, 55, 0.05) 52px);
-        }
-
-        /* Container for the whole layout */
-        .container {
-            padding-top: 40px;
-            align-items: flex-start;
-            padding-right: 45px;
-            margin: 0;
-            width: 100%;
-            padding-bottom: 30px;
-        }
-
-        /* Heading on the far left */
-        .heading {
-            width: max;
-            /* fixed width for the heading column */
-            font-size: 35px;
-            font-weight: bold;
-            margin-right: 20px;
-            color: #FFFFFF;
-        }
-
-        /* Topics area */
-        .topics {
-            flex: 1;
-
-        }
-
-        /* Each topic style */
-        .topic {
-            border-top: 1px solid #ccc;
-            padding: 20px 0;
-            min-height: 80px;
-            /* good height for each topic */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-        }
-
-        /* Topic title */
-        .topic-title {
-            font-size: 20px;
-            color: #FFFFFF;
-        }
-
-        /* Expand/collapse sign styling */
-        .expand-sign {
-            font-size: 24px;
-            cursor: pointer;
-            user-select: none;
+        
+        .menu-spacer {
             width: 30px;
-            /* fixed width to align to right */
-            text-align: center;
         }
 
-        /* Content that expands/collapses */
-        .topic-content {
-            display: none;
-            padding: 10px 0;
-            background-color: #f9f9f9;
-            border-top: 1px solid #eee;
-            font-family: "Playwrite NZ Basic", cursive;
-            font-optical-sizing: auto;
-            font-weight: 100;
-            font-style: normal;
-        }
-
-
-
-        /* CSS - Just for the stack */
-        .stack-container {
-            position: relative;
-            width: 96%;
-            max-width: 2000px;
-            margin: 100px auto;
-            height: 400vh;
-
-            /* Creates scroll space */
-        }
-
-        .stack-item {
-            position: sticky;
-            top: 100px;
+        /* Video Section */
+        .video-section {
+            margin-top: 70px;
             width: 100%;
-            height: 70vh;
-            border-radius: 30px;
+            height: 50vh;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(26, 26, 26, 0.3);
-            margin-bottom: 50px;
         }
 
-        .stack-item img {
+        .video-section video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .stack-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px;
-            background: linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent);
+        /* Content Sections */
+        .content-section {
+            padding: 60px 20px;
+            text-align: center;
         }
 
-        .stack-overlay h2 {
-            color: #FFFFFF;
-            font-size: 2.5rem;
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
             font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 20px;
         }
 
-        @media (max-width: 768px) {
-            .stack-container {
-                width: 100%;
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: var(--gold);
+            margin: 0 auto 20px;
+        }
 
+        .section-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--navy);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* header branding */
+        .brand-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: 1px;
+        }
+
+        .brand-motto {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 300;
+            color: var(--black);
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        /* Image Content Block */
+        .image-content-block {
+            background-color: var(--beige);
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        .content-image {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            display: block;
+            border: none;
+            margin: 0;
+        }
+
+        .image-content-text {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .image-content-block .section-heading {
+            color: var(--black);
+        }
+
+        .image-content-block .section-text {
+            color: var(--black);
+        }
+
+        .view-more-btn {
+        background-color: transparent;
+        color: var(--gold);
+        border: 2px solid var(--gold);
+        padding: 12px 35px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 30px;
+        }
+
+        .view-more-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 60px 5px;
+            background-color: var(--white);
+        }
+
+        .team-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide img {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-arrows {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .arrow {
+            background-color: var(--navy);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .arrow:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 50px 20px 100px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: var(--gold-light);
+        }
+
+        .footer-details {
+            font-size: 14px;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .footer-details a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-details a:hover {
+            color: var(--gold);
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        /* Book Now Button */
+        .book-now-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .book-now-btn:hover {
+            background-color: var(--navy);
+            color: var(--gold);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.6);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--navy);
+            padding: 80px 30px;
+            transition: left 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu nav {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .mobile-menu nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 300;
+            transition: color 0.3s ease;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu nav a:hover {
+            color: var(--gold);
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (min-width: 768px) {
+            .brand-name {
+                font-size: 22px;
             }
 
-            .stack-item {
+            .section-heading {
+                font-size: 38px;
+            }
+
+            .section-text {
+                font-size: 18px;
+            }
+
+            .video-section {
                 height: 60vh;
             }
-
-            .stack-overlay h2 {
-                font-size: 1.8rem;
-            }
-
-            .body {
-                width: 100%;
-                overflow-x: hidden;
-
-            }
-
-
-
-
         }
     </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="brand-container">
+            <div class="brand-name">LUX BUTLERS & STAFFING</div>
+            <div class="brand-motto">Luxury in Every Detail</div>
+        </div>
+        <div class="menu-spacer"></div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="#" onclick="toggleMenu()">Home</a>
+            <a href="services.html" onclick="toggleMenu()">Services</a>
+            <a href="about.html" onclick="toggleMenu()">About</a>
+        </nav>
+    </div>
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+    <!-- Video Section -->
+    <section class="video-section" id="home">
+        <video autoplay muted loop playsinline>
+            <source src="images/intro.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- First Content Section -->
+    <section class="content-section">
+        <h2 class="section-heading">Luxury in Every Detail</h2>
+        <div class="divider"></div>
+        <p class="section-text">
+            At Lux Butlers & Staffing, we don't just serve events — we elevate them. Our dedicated team of professional
+            butlers and hospitality staff bring unparalleled excellence, discretion, and precision to every occasion,
+            ensuring your guests experience nothing less than perfection.
+        </p>
+    </section>
+
+    <!-- Image Content Block -->
+    <section class="image-content-block" id="services">
+        <img src="images/fgfg.jpeg" alt="Luxury table setting"
+            class="content-image">
+        <div class="image-content-text">
+            <h2 class="section-heading">Our Services</h2>
+            <div class="divider"></div>
+            <p class="section-text">
+                From intimate private gatherings to grand corporate functions, our expertly trained staff deliver
+                sophisticated service with impeccable attention to detail. We specialize in luxury events, private
+                dining, and exclusive hospitality experiences that leave lasting impressions.
+            </p>
+            <button class="view-more-btn" onclick="window.location.href='services.html'">VIEW MORE</button>
+        </div>
+    </section>
+
+    <section class="image-content-block" id="services">
+        <img src="images/jj.jpeg" alt="Luxury table setting"
+            class="content-image">
+        <div class="image-content-text">
+            <h2 class="section-heading">About</h2>
+            <div class="divider"></div>
+            <p class="section-text">
+                From intimate private gatherings to grand corporate functions, our expertly trained staff deliver
+                sophisticated service with impeccable attention to detail. We specialize in luxury events, private
+                dining, and exclusive hospitality experiences that leave lasting impressions.
+            </p>
+            <button class="view-more-btn" onclick="window.location.href='about.html'">VIEW MORE</button>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <h2 class="team-heading">Our Distinguished Team</h2>
+
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="images/crew.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/wine-hold.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/crew3.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/wqsa.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/fgh.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/qwe.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/weq.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/waiter.jpeg"
+                        alt="Team member 1">
+                </div>
+                <div class="slide">
+                    <img src="images/crewline.jpeg"
+                        alt="Team member 1">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="slider-arrows">
+            <div class="arrow" onclick="prevSlide()">‹</div>
+            <div class="arrow" onclick="nextSlide()">›</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-brand">LUX BUTLERS & STAFFING</div>
+        <div class="footer-tagline">Luxury in Every Detail</div>
+        <div class="footer-details">
+            Email: <a href="mailto:info@luxbutlers.com">info@luxbutlers.com</a><br>
+            Phone: <a href="tel:+27123456789">+27 12 345 6789</a><br>
+            Location: Johannesburg, South Africa
+        </div>
+        <div class="footer-copyright">
+            © 2026 Lux Butlers & Staffing. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Book Now Button -->
+    <button class="book-now-btn" onclick="bookNow()">BOOK NOW</button>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('menuOverlay');
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slider = document.getElementById('slider');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Book Now Button
+        function bookNow() {
+            alert('Thank you for your interest! Please contact us at info@luxbutlers.com or call +27 12 345 6789 to book our services.');
+        }
+
+        // Auto-advance slider every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 
 </html>
