@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Booking - Lux Butlers & Staffing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy: #0a1128;
+            --white: #ffffff;
+            --gold: #d4af37;
+            --gold-light: #e8c97f;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            background-color: var(--navy);
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(10, 17, 40, 0.1);
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 1px;
+        }
+        
+        .brand-motto {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            color: var(--navy);
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+        
+        /* Booking Container */
+        .booking-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: var(--white);
+            padding: 50px 30px;
+            border: 2px solid var(--gold);
+        }
+        
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: 0 auto 20px;
+        }
+        
+        .page-subtitle {
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--navy);
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+        
+        /* Form Sections */
+        .form-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gold);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--navy);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: var(--navy);
+            background-color: var(--white);
+            border: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            padding-right: 40px;
+        }
+        
+        .time-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            background-color: var(--navy);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: var(--navy);
+            color: var(--gold);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid var(--gold);
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 2px solid var(--gold);
+        }
+        
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--gold);
+        }
+        
+        .footer-tagline {
+            font-size: 12px;
+            font-style: italic;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 1px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+        
+        .required {
+            color: var(--gold);
+        }
+        
+        @media (min-width: 768px) {
+            .booking-container {
+                padding: 60px 50px;
+            }
+            
+            .page-title {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="brand-name">LUX BUTLERS & STAFFING</div>
+        <div class="brand-motto">Luxury in Every Detail</div>
+    </header>
+    
+    <!-- Booking Form Container -->
+    <div class="booking-container">
+        <h1 class="page-title">MAKE A BOOKING</h1>
+        <div class="divider"></div>
+        <p class="page-subtitle">
+            Please complete the enquiry form below and a member of our team will be in touch to discuss your requirements.
+        </p>
+        
+        <form id="bookingForm">
+            <!-- Client Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">Client Information</h2>
+                
+                <div class="form-group">
+                    <label for="firstName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="surname">Surname <span class="required">*</span></label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number <span class="required">*</span></label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <!-- Event Details Section -->
+            <div class="form-section">
+                <h2 class="section-title">Event Details</h2>
+                
+                <div class="form-group">
+                    <label for="eventName">Event Name <span class="required">*</span></label>
+                    <input type="text" id="eventName" name="eventName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventType">Event Type <span class="required">*</span></label>
+                    <select id="eventType" name="eventType" required>
+                        <option value="">Select event type...</option>
+                        <option value="Private">Private</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventDate">Event Date <span class="required">*</span></label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Event Time <span class="required">*</span></label>
+                    <div class="time-group">
+                        <div>
+                            <input type="time" id="startTime" name="startTime" placeholder="Start Time" required>
+                        </div>
+                        <div>
+                            <input type="time" id="endTime" name="endTime" placeholder="End Time" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventLocation">Event Location / Venue <span class="required">*</span></label>
+                    <input type="text" id="eventLocation" name="eventLocation" required>
+                </div>
+            </div>
+            
+            <!-- Service Requirements Section -->
+            <div class="form-section">
+                <h2 class="section-title">Service Requirements</h2>
+                
+                <div class="form-group">
+                    <label for="servicesRequired">Service(s) Required <span class="required">*</span></label>
+                    <select id="servicesRequired" name="servicesRequired" required>
+                        <option value="">Select service...</option>
+                        <option value="Professional Butlers">Professional Butlers</option>
+                        <option value="Event Staff & Waitstaff">Event Staff & Waitstaff</option>
+                        <option value="Bartenders & Mixologists">Bartenders & Mixologists</option>
+                        <option value="Wine Stewards">Wine Stewards</option>
+                        <option value="Hosts & Hostesses">Hosts & Hostesses</option>
+                        <option value="Porters">Porters</option>
+                        <option value="Concierge Services">Concierge Services</option>
+                        <option value="Event Models">Event Models</option>
+                        <option value="Corporate & Private Event Staffing">Corporate & Private Event Staffing</option>
+                        <option value="Multiple Services">Multiple Services</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="staffNumber">Number of Staff Needed <span class="required">*</span></label>
+                    <input type="number" id="staffNumber" name="staffNumber" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dressCode">Dress Code (if applicable)</label>
+                    <input type="text" id="dressCode" name="dressCode" placeholder="e.g., Black tie, Formal, Casual elegant">
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalNotes">Additional Notes or Special Requests</label>
+                    <textarea id="additionalNotes" name="additionalNotes" placeholder="Please share any specific requirements, preferences, or details we should know about your event..."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">SUBMIT ENQUIRY</button>
+            
+            <div class="success-message" id="successMessage">
+                <p style="font-size: 18px; margin-bottom: 10px;">✓ Thank you for your enquiry!</p>
+                <p style="font-size: 14px;">A member of our team will be in touch shortly to discuss your requirements.</p>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">LUX BUTLERS & STAFFING</div>
+        <div class="footer-tagline">Luxury in Every Detail</div>
+        <a href="index.html" class="back-link">← BACK TO HOME</a>
+    </footer>
+    
+    <script>
+        // IMPORTANT: Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL' with your actual Google Apps Script Web App URL
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbywFLDvjZXCQUVZk658sNSLq474gI4Znacp7PW3mI5s0o2LSq51GPhhBEQ8IR06UMV8/exec';
+        
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Disable button during submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'SUBMITTING...';
+            
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                surname: document.getElementById('surname').value,
+                contactNumber: document.getElementById('contactNumber').value,
+                email: document.getElementById('email').value,
+                eventName: document.getElementById('eventName').value,
+                eventType: document.getElementById('eventType').value,
+                eventDate: document.getElementById('eventDate').value,
+                startTime: document.getElementById('startTime').value,
+                endTime: document.getElementById('endTime').value,
+                eventLocation: document.getElementById('eventLocation').value,
+                servicesRequired: document.getElementById('servicesRequired').value,
+                staffNumber: document.getElementById('staffNumber').value,
+                dressCode: document.getElementById('dressCode').value,
+                additionalNotes: document.getElementById('additionalNotes').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            try {
+                // Send data to Google Apps Script
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Show success message
+                successMessage.classList.add('show');
+                
+                // Reset form
+                document.getElementById('bookingForm').reset();
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            } catch (error) {
+                alert('There was an error submitting your enquiry. Please try again or contact us directly at info@luxbutlers.com');
+                console.error('Error:', error);
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'SUBMIT ENQUIRY';
+            }
+        });
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('eventDate').setAttribute('min', today);
+    </script>
+</body>
+</html>
