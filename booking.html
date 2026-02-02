@@ -281,7 +281,13 @@
             Please complete the enquiry form below and a member of our team will be in touch to discuss your requirements.
         </p>
         
-        <form id="bookingForm">
+        <form id="bookingForm" action="https://formsubmit.co/info@luxbutlers.co.za" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Booking Enquiry - Lux Butlers">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            
             <!-- Client Information Section -->
             <div class="form-section">
                 <h2 class="section-title">Client Information</h2>
@@ -404,66 +410,10 @@
     </footer>
     
     <script>
-        // IMPORTANT: Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL' with your actual Google Apps Script Web App URL
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbywFLDvjZXCQUVZk658sNSLq474gI4Znacp7PW3mI5s0o2LSq51GPhhBEQ8IR06UMV8/exec';
-        
-        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Disable button during submission
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'SUBMITTING...';
-            
-            // Collect form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                surname: document.getElementById('surname').value,
-                contactNumber: document.getElementById('contactNumber').value,
-                email: document.getElementById('email').value,
-                eventName: document.getElementById('eventName').value,
-                eventType: document.getElementById('eventType').value,
-                eventDate: document.getElementById('eventDate').value,
-                startTime: document.getElementById('startTime').value,
-                endTime: document.getElementById('endTime').value,
-                eventLocation: document.getElementById('eventLocation').value,
-                servicesRequired: document.getElementById('servicesRequired').value,
-                staffNumber: document.getElementById('staffNumber').value,
-                dressCode: document.getElementById('dressCode').value,
-                additionalNotes: document.getElementById('additionalNotes').value,
-                timestamp: new Date().toLocaleString()
-            };
-            
-            try {
-                // Send data to Google Apps Script
-                const response = await fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                // Show success message
-                successMessage.classList.add('show');
-                
-                // Reset form
-                document.getElementById('bookingForm').reset();
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-            } catch (error) {
-                alert('There was an error submitting your enquiry. Please try again or contact us directly at info@luxbutlers.com');
-                console.error('Error:', error);
-            } finally {
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'SUBMIT ENQUIRY';
-            }
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.textContent = 'SUBMITTING...';
         });
         
         // Set minimum date to today
